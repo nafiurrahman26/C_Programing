@@ -28,7 +28,7 @@ int main(){
     }
     printf("Enter Searching element: ");
     scanf("%d",&sch_eleminet);
-    printf("Your searching value is index of: ",binary_search(arr,sch_eleminet,n));
+    // printf("Your searching value is index of: ",binary_search(arr,sch_eleminet,n));
     int result = binary_search(arr,sch_eleminet,n);
     if (result != -1) {
         printf("Element found at index %d\n", result+1);
