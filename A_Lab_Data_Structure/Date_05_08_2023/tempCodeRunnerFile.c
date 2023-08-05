@@ -1,0 +1,1 @@
+// next pointer assigned to address of node2
