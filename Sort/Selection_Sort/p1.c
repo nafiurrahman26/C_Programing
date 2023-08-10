@@ -15,7 +15,7 @@ int main(){
     for(i=0;i<size-1;i++){
         min_index=i;
         for(j=i+1;j<size;j++){
-            count++;
+            count++; 
             if(array[j]<array[min_index]){
                 min_index=j;
             }
