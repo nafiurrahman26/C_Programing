@@ -7,7 +7,7 @@ int partition(int a[],int lb,int ub);
 int partition(int a[],int lb,int ub){
     int privot=a[lb];
     int start=lb;
-    int end=ub;
+    int end=ub;    
     int temp;
     do{
         while(a[start]<=privot){

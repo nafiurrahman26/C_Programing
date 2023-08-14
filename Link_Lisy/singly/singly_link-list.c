@@ -38,6 +38,11 @@ void display(){
     while(ptr!=NULL){
         printf("%d->",ptr->data);
         ptr=ptr->next;
+        // if(ptr->data%2==0){
+        //     printf("%d->",ptr->data);
+        //     break;
+        // }
+        // ptr=ptr->next;
     }
     if(ptr==NULL){
         printf("NULL");

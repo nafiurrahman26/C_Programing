@@ -5,7 +5,7 @@ void marge(int a[],int lb,int mid,int ub){
     int i=lb;
     int j=mid+1;
     int k=lb;
-
+    
     while(i<=mid && j<=ub){
         if(a[i]<=a[j]){
             new_a[k]=a[i];
