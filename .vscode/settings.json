@@ -2,5 +2,8 @@
     "git.enabled": true,
     "git.autorefresh": true,
     "git.detectSubmodules": true,
-    "git.ignoreWindowsGit27Warning": false
+    "git.ignoreWindowsGit27Warning": false,
+    "files.associations": {
+        "stdlib.h": "c"
+    }
 }
