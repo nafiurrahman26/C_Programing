@@ -56,7 +56,7 @@ int check_size(){
 void add_mid_pos(){
     node *mid,*temp;
     mid=(node*)malloc(sizeof(node));
-    int size,pos,i=1;
+    int size,pos,i=2;
     size=check_size();
     printf("Enter possition you want to add a node: ");
     scanf("%d",&pos);

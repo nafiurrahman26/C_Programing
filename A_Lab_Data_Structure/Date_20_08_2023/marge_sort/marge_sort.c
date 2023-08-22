@@ -38,27 +38,22 @@ void marge(int a[],int lb,int mid,int ub){
 }
 void marge_sort(int a[],int lb,int ub){
     int mid;
-    if(lb<ub){
+    if(ub>lb){
         mid=(lb+ub)/2;
         marge_sort(a,lb,mid);
         marge_sort(a,mid+1,ub);
         marge(a,lb,mid,ub);
     }
 }
-
-void print(int a[],int size){
+void display(int a[],int size){
     int i;
     for(i=0;i<size;i++){
         printf("%d ",a[i]);
     }
-    printf("\n");
 }
 int main(){
-    int array[]={76,34,6,54,2,54,1,58,62};
+    int array[]={96,564,34,3,2,5645,34,2,1};
     int size=sizeof(array)/sizeof(array[0]);
-    printf("Print before sorted: ");
-    print(array,size);
     marge_sort(array,0,size-1);
-    printf("Print after  sorted: ");
-    print(array,size);
+    display(array,size);
 }
