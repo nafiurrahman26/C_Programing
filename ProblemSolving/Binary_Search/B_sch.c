@@ -27,7 +27,7 @@ int main() {
     for (i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
     }
-
+    
     printf("Enter the element you want to search for: ");
     scanf("%d", &sch_element);
 
@@ -35,6 +35,6 @@ int main() {
     if (result != -1) {
         printf("Element found at index %d\n", result+1);
     }
-
+    
     return 0;
 }

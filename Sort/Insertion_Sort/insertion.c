@@ -2,16 +2,15 @@
 int main(){
     int array[]={7,5,3,1,88,43,2};
     int size=sizeof(array)/sizeof(array[0]);
-    int i;
-    int value,hole;
+    int i,j,current;
     for(i=1;i<size;i++){
-        value=array[i];
-        hole=i;
-        while(hole>0 && array[hole-1]>value){
-            array[hole]=array[hole-1];
-            hole--;
+        current=array[i];
+        j=i-1;
+        while(array[j]>current && j>=0){
+            array[j+1]=array[j];
+            j--;
         }
-        array[hole]=value;
+        array[j+1]=current;
     }
     for(i=0;i<size;i++){
         printf("%d ",array[i]);

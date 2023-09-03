@@ -30,15 +30,36 @@ int main(){
             }
         }
     }
-
+    //note calculate: 
     printf("\n\n");
-    int k=0,count=0,coin=0;
+    int k=0,count=0,coin=0,t;
+    int count2=0,coin2=0,exch2=exch,sabbir=0;
     while(k<size){
-        if(array[k]<=exch){
+     
+        // if(array[k]<=exch){
+        //     count=exch/array[k];
+        //     exch=exch%array[k];
+        //     //printf("Note of %d is %d \n",array[k],count);
+        //     coin=coin+count;
+        // }
+
+        for(t=0;t<size;t++){
+
+            if(exch%array[t]==0){
+                count=exch/array[t];
+                printf("ssNote of %d is %d \n",array[k],count);
+                coin=coin+count;
+                sabbir=-1;
+            }
+        }
+        if(sabbir==0){
+             if(array[k]<=exch){
             count=exch/array[k];
             exch=exch%array[k];
             printf("Note of %d is %d \n",array[k],count);
             coin=coin+count;
+        }
+
         }
         k++;
   
