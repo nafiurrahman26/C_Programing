@@ -69,8 +69,8 @@ int  main(){
     int top=0;
     float maxp=0,maxw=0;
     float reminder=0;
-    int br=0;
-    while(capacity>maxw && br==0){
+    // int br=0;
+    while(capacity>maxw){
         printf("Take %d :\n",top+1);
 
         maxw=maxw+weight[top];
@@ -78,22 +78,30 @@ int  main(){
         
         printf("taken weight : %.2f\n",weight[top]);
         printf("taken profit: %.2f\n",profit[top]);
-        printf("\nTotal profit %.2f and total weight %.2f \n",maxp,maxw);
+        printf("Total profit %.2f and total weight %.2f \n",maxp,maxw);
         reminder=capacity-maxw;
         printf("Remaining capacity : %.2f \n",reminder);
         printf("\n");
         top++; 
 
         if(reminder<weight[top]){
-            br=-1;
+            break;
         }       
     }
 
+    if(reminder>0){
+        float frac_profit;
+        frac_profit=pw[top]*reminder;
+        maxw=maxw+reminder;
+        maxp=maxp+frac_profit;
+        printf("Take %d :\n",top+1);
 
-//   printf("\nMaximum profit is : %d",maxp);
-
-
+        printf("taken weight : %.2f\n",reminder);
+        printf("taken profit: %.2f\n",frac_profit);
+        printf("Total profit %.2f and total weight %.2f \n",maxp,maxw);
+        reminder=capacity-maxw;
+        printf("Remaining capacity : %.2f \n",reminder);
+        printf("\n");
+    }
+    
 }
-
-// float weight[]={2,3,5,7,1,4,1};
-//     float profit[]={10,5,15,7,6,8,3};

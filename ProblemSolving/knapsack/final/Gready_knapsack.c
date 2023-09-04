@@ -8,16 +8,30 @@ void display(float a[],int size){
     printf("\n");
 }
 int  main(){
-    // int weight[]={5,5,3,2};
-    // int profit[]={3,4,5,6};
-    float weight[]={3,1,4,2,9,4,3};
-    float profit[]={12,5,16,7,9,11,6};
-    int size=sizeof(weight)/sizeof(weight[0]);
+    printf("-------------------------Wealcome-------------------------\n");
+    printf("  --------------------------NR------------------------\n\n");
+    printf("Input: \n");
+
+    int size,i;
+    printf("Enter the size of object: ");
+    scanf("%d",&size);
+    float weight[size];
+    float profit[size];
+
+    for(i=0;i<size;i++){
+        printf("Enter the %d eliments weight and profit: ",i+1);
+        scanf("%f %f",&weight[i],&profit[i]);
+    }
+
+    float capacity;
+    printf("\nEnter the bag capacity : ");
+    scanf("%f",&capacity);
     float pw[size];
-    int i;
+
     for(i=0;i<size;i++){
         pw[i]=profit[i]/weight[i];
     }
+    printf("\nOutput: \n");
     printf("------Given the data------\n\n");
     printf("Print weight : ");
     display(weight,size);
@@ -63,7 +77,6 @@ int  main(){
 
     //gready calculation part: 
     printf("--------Gready Part---------\n\n");
-    float capacity=15;
 
   
     int top=0;
@@ -103,5 +116,10 @@ int  main(){
         printf("Remaining capacity : %.2f \n",reminder);
         printf("\n");
     }
-    
+
+    printf("----------------------------\n");
+    printf("\n\n My Total profit is %.2f\n\n",maxp);
+    printf("---------Thank you----------\n");
+    return 0;
+
 }
