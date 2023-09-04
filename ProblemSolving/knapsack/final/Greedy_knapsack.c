@@ -76,7 +76,7 @@ int  main(){
     printf("\n\n");
 
     //gready calculation part: 
-    printf("--------Gready Part---------\n\n");
+    printf("--------Greedy Part---------\n\n");
 
   
     int top=0;
