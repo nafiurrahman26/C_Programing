@@ -6,7 +6,7 @@ int main(){
     printf("Enter your amount: ");
     scanf("%d",&exch);
 
-
+ 
     int size;
     printf("Enter how many exchang note do you want: ");
     scanf("%d",&size);
