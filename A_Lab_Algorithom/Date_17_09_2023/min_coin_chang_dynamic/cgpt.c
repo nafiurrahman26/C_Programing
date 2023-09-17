@@ -45,7 +45,7 @@ display(arr,n+1,value+1);
 int main(){
     int n=4,i;
 
-    int a[4]={1,2,4,10};
+    int a[4]={1,2,10,20};
 
     int value=20;
 
