@@ -70,7 +70,7 @@ void dlt_last_node(){
     previous_node->next=NULL;
     }
     free(temp);
-    printf("Last Node Delleted Succesfully!\n");
+    printf("Last Node Deleted Succesfully!\n");
     display();
 }
 void dlt_mid(){
