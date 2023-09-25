@@ -78,21 +78,48 @@ void dlt_last_node(){
     display();
 }
 void dlt_mid(){
-    node *temp,*pre_node;
     int pos;
-    printf("Select delete possition: ");
-    scanf("%d",&pos);
-    temp=head;
-    int i=1;
-    while(i<pos){
-        pre_node=temp;
-        temp=temp->next;
-        i++;
+    printf("Enter the position to delete: ");
+    scanf("%d", &pos);
+
+    if (head == NULL) {
+        printf("List is empty. Cannot delete.\n");
+        return;
     }
-    pre_node->next=temp->next;
-    free(temp);
-    printf("After delleted node: \n");
-    display();
+
+    if (pos < 1) {
+        printf("Invalid position. Position must be a positive integer.\n");
+        return;
+    }
+
+    if (pos == 1) {
+        // Special case: Deleting the head node
+        node *temp = head;
+        head = head->next;
+        free(temp);
+        printf("Deleted successfully from the beginning.\n");
+    } else {
+        node *temp = head;
+        node *pre = NULL;
+        int i = 1;
+
+        while (i < pos && temp != NULL) {
+            pre = temp;
+            temp = temp->next;
+            i++;
+        }
+
+        if (temp == NULL) {
+            printf("Position %d is out of bounds.\n", pos);
+        } else {
+            pre->next = temp->next;
+            free(temp);
+            printf("Deleted successfully at position %d.\n", pos);
+        }
+    }
+
+    display(); // Assuming you have a display() function to show the updated list.
+
 }
 int main(){
     creat_node();
