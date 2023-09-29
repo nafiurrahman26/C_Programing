@@ -13,6 +13,8 @@ void creat(){
     scanf("%d",&n);
     int i=1;
     while(i<=n){
+
+        
         printf("Enter the %d node data: ",i);
         int value;
         scanf("%d",&value);
@@ -20,6 +22,8 @@ void creat(){
         new_node=(node*)malloc(sizeof(node));
         new_node->data=value;
         new_node->next=NULL;
+
+
         if(head==NULL){
             head=new_node;
             tail=new_node;
