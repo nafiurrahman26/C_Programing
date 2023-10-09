@@ -46,7 +46,7 @@ void add_Begenning(){
 }
 int check_size(){
     node *tmp=head;
-    int count=1;
+    int count=0;
     while(tmp->next!=NULL){
         tmp=tmp->next;
         ++count;
@@ -56,18 +56,19 @@ int check_size(){
 void add_mid_pos(){
     node *mid,*temp;
     mid=(node*)malloc(sizeof(node));
-    int size,pos,i=2;
+    int size,pos,i=1;
     size=check_size();
     printf("Enter possition you want to add a node: ");
     scanf("%d",&pos);
+
+
     if(pos>size){
         printf("Invalit Possition\n");
     }else{
         temp=head;
         while(i<pos){
             temp=temp->next;
-            i++;
-            
+            i++;           
         }
         printf("Enter the data: ");
         scanf("%d",&mid->data);
@@ -84,6 +85,7 @@ void add_end(){
     scanf("%d",&new_value);
     end_node->data=new_value;
     end_node->next=NULL;
+
     node  *temp1;
     temp1=head;
     while(temp1->next!=NULL){
@@ -91,8 +93,18 @@ void add_end(){
     }
 
     temp1->next=end_node;
+    temp=temp1;
     
 }
+// void add_end(){
+//     printf("added.");
+//     node *end_node;
+//     end_node=(node*)malloc(sizeof(node));
+//     end_node->data=69;
+//     end_node->next=NULL;
+//     temp->next=end_node;
+//     temp=new_node;
+// }
 int main(){
     creation();
     display();
@@ -100,11 +112,13 @@ int main(){
     add_Begenning();
     display();
 
+    // add_end();
     add_end();
     display();
 
     add_mid_pos();
     display();
+
     
     return 0;
 }
