@@ -52,6 +52,7 @@ int font=0,rear=-1,totalItem=0;
         enqueue(30);
         enqueue(40);
         printQueue();
+        // printf("Total item %d \n",totalItem);
 
         dequeue();
         printQueue();
