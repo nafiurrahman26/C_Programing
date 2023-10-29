@@ -13,8 +13,7 @@ int main(){
             count++;
             j++;
             bin_size=8;
-        }
-        
+        }       
     }
     printf("%d",count);
 }
