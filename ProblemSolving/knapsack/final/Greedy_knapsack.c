@@ -88,13 +88,14 @@ int  main(){
 
         maxw=maxw+weight[top];
         maxp=maxp+profit[top];
-        
+        reminder=capacity-maxw;
+
         printf("taken weight : %.2f\n",weight[top]);
         printf("taken profit: %.2f\n",profit[top]);
         printf("Total profit %.2f and total weight %.2f \n",maxp,maxw);
-        reminder=capacity-maxw;
         printf("Remaining capacity : %.2f \n",reminder);
         printf("\n");
+
         top++; 
 
         if(reminder<weight[top]){
@@ -107,12 +108,12 @@ int  main(){
         frac_profit=pw[top]*reminder;
         maxw=maxw+reminder;
         maxp=maxp+frac_profit;
+        reminder=capacity-maxw;
         printf("Take %d :\n",top+1);
 
         printf("taken weight : %.2f\n",reminder);
         printf("taken profit: %.2f\n",frac_profit);
         printf("Total profit %.2f and total weight %.2f \n",maxp,maxw);
-        reminder=capacity-maxw;
         printf("Remaining capacity : %.2f \n",reminder);
         printf("\n");
     }
